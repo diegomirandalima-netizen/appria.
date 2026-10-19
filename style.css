@@ -1,3 +1,152 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.cabecalho {
+  height: 80px;
+  background-color: #242b36;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8%;
+}
+
+.cabecalho-logo {
+  width: 170px;
+  margin-bottom: .2em;
+}
+
+.cabecalho-nav-lista {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.cabecalho-nav-item a {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.cabecalho-nav-item a:hover {
+  color: #d45b68;
+}
+
+.container {
+  padding: 3.5em 5%;
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
+main {
+  display: block;
+  width: 100%;
+}
+
+.conteudo {
+  background-image: url("bg-intro.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.secaoDestaque {
+  text-align: center;
+  padding: 8em 2em;
+  color: #fff;
+}
+
+.secaoDestaque-titulo {
+  font-weight: bold;
+  margin-bottom: 1em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5em;
+  line-height: 1.2;
+}
+
+.secaoDestaque-texto {
+  max-width: 600px;
+  margin: 0 auto 2em auto;
+  font-size: 1.25em;
+  font-weight: normal;
+  line-height: 1.6;
+}
+
+.btnPadrao {
+  border-radius: 5px;
+  border: 0;
+  background-color: #B72E2E;
+  color: #fff;
+  font-size: 1.2em;
+  padding: .6em 1.5em;
+  font-family: 'Open Sans', 'Segoe UI', sans-serif;
+  outline: 0;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btnPadrao:hover,
+.btnPadrao:focus {
+  background-color: #962424;
+  cursor: pointer;
+}
+
+.secaoDiferenciais {
+  padding: 2em 0;
+  background-color: #f7f4f4;
+}
+
+.diferenciais {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  list-style: none;
+}
+
+.diferenciais-diferencial {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.diferenciais-diferencial div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+
+.diferenciais-diferencial img {
+  width: 42px;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+.diferenciais-diferencial h2 {
+  color: #4F4C4C;
+  font-size: 1.4em;
+  margin-bottom: .6em;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.diferenciais-diferencial p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1em;
+}
+
 .secaoSobre {
   color: #4F4C4C;
 }
