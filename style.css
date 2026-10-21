@@ -199,5 +199,32 @@ main {
     margin-right: 3em;
     margin: 1em 3em 0 0
   }
+}
 
-.
+.secaoPlanos {
+  text-align: center;
+  background-color: #F7F4F4;
+}
+
+.secaoPlanos-plano {
+  border-radius: 5px;
+  background-color: #fff;
+  width: 80%;
+  margin: 0 .5em 2em .5em;
+  padding-bottom: 2em;
+  box-shadow: 0 2px 9px #ddd;
+  max-width: 300px;
+  display: inline-block;
+}
+
+.secaoPlanos-plano-start {
+  color: #56CCF2;
+}
+
+.secaoPlanos-plano-ultra {
+  color: #B04CD9;
+}
+
+.secaoPlanos-plano-mega {
+  color: #E33B3B;
+}
