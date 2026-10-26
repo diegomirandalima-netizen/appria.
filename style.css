@@ -250,12 +250,25 @@ main {
   position: relative;
 }
 
+/* Bolinhas dentro do quadrado */
 .secaoPlanos-plano-itens {
-  text-align: left;
-  line-height: 2;
-  list-style: disc;
-  color: #666;
+  padding-left: 1.5em;
+  margin: .5em 1em 1em;
 }
+
+/* Quadrados do mesmo tamanho */
+.secaoPlanos .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: .5em;
+}
+
+.secaoPlanos .container h2 {
+  width: 100%;
+}
+
 
 .secaoPlanos-plano-itens-teste {
   display: block;
