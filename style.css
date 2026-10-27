@@ -161,7 +161,6 @@ main {
   display: none;
 }
 
-
 @media (min-width: 830px) {
 
   .secaoSobre {
@@ -206,16 +205,37 @@ main {
   background-color: #F7F4F4;
 }
 
+/* --- ONDE FOI ALTERADO: ABAIXO ESTÃO AS NOVAS CONFIGURAÇÕES --- */
+
+/* Novo container adicionado para alinhar os elementos lado a lado */
+.secaoPlanos-container {
+  display: flex;               /* ADICIONADO: Ativa o Flexbox */
+  justify-content: center;     /* ADICIONADO: Centraliza o bloco de planos na tela */
+  align-items: stretch;        /* ADICIONADO: Força todos os planos a terem a mesma altura */
+  gap: 20px;                   /* ADICIONADO: Cria espaçamento igual entre os quadrados */
+  flex-wrap: wrap;             /* ADICIONADO: Quebra linha automaticamente no celular */
+  width: 100%;                 /* ADICIONADO */
+}
+
 .secaoPlanos-plano {
   border-radius: 5px;
   background-color: #fff;
-  width: 80%;
-  margin: 0 .5em 2em .5em;
-  padding-bottom: 2em;
   box-shadow: 0 2px 9px #ddd;
-  max-width: 300px;
-  display: inline-block;
+  
+  /* Ajustes de tamanho e distribuição */
+  flex: 1;                     /* ALTERADO: Faz os planos dividirem o espaço igualmente */
+  min-width: 250px;            /* ADICIONADO: Largura mínima para telas menores */
+  max-width: 300px;            /* ALTERADO: Mantido do seu código para limitar largura máxima */
+  padding: 2em 1.5em;          /* ALTERADO: Ajustado para o texto não colar nas bordas laterais */
+  
+  /* Alinhamento do texto interno */
+  display: flex;               /* ADICIONADO: Torna o quadrado um flex container vertical */
+  flex-direction: column;      /* ADICIONADO: Alinha os textos e botões um abaixo do outro */
+  align-items: center;         /* ADICIONADO: Centraliza o texto e elementos na horizontal */
+  justify-content: center;     /* ADICIONADO: Centraliza o texto e elementos na vertical */
 }
+
+/* --- FIM DAS ALTERAÇÕES --- */
 
 .secaoPlanos-plano-start {
   color: #56CCF2;
