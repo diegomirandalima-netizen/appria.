@@ -69,5 +69,200 @@ main {
   line-height: 1.2;
 }
 
-.secaoDesta
+.secaoDestaque-texto {
+  max-width: 600px;
+  margin: 0 auto 2em auto;
+  font-size: 1.25em;
+  font-weight: normal;
+  line-height: 1.6;
+}
 
+.btnPadrao {
+  border-radius: 5px;
+  border: 0;
+  background-color: #B72E2E;
+  color: #fff;
+  font-size: 1.2em;
+  padding: .6em 1.5em;
+  font-family: 'Open Sans', 'Segoe UI', sans-serif;
+  outline: 0;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.btnPadrao:hover,
+.btnPadrao:focus {
+  background-color: #962424;
+  cursor: pointer;
+}
+
+.secaoDiferenciais {
+  padding: 2em 0;
+  background-color: #f7f4f4;
+}
+
+.diferenciais {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  list-style: none;
+}
+
+.diferenciais-diferencial {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  text-align: center;
+}
+
+.diferenciais-diferencial div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+
+.diferenciais-diferencial img {
+  width: 42px;
+  height: auto;
+  margin-bottom: 1em;
+}
+
+.diferenciais-diferencial h2 {
+  color: #4F4C4C;
+  font-size: 1.4em;
+  margin-bottom: .6em;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.diferenciais-diferencial p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+.secaoSobre {
+  color: #4F4C4C;
+}
+
+.secaoSobre p {
+  margin-bottom: 1em;
+}
+
+.secaoSobre-plataformas {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
+
+.secaoSobre-imgDestaque {
+  display: none;
+}
+
+
+@media (min-width: 830px) {
+
+  .secaoSobre {
+    text-align: left;
+  }
+
+  .secaoSobre h2 {
+    text-align: left;
+  }
+
+  .secaoSobre-imgDestaque {
+    display: block;
+    float: right;
+    margin-left: 2em;
+    margin-bottom: 2em;
+  }
+
+  .secaoSobre-plataformas {
+    display: block;
+    padding-top: 1.5em;
+    position: relative;
+  }
+
+  .secaoSobre-plataformas:before {
+    content: '';
+    height: 1px;
+    width: 45%;
+    background-color: #D9D9D9;
+    position: absolute;
+    top: 4px;
+  }
+
+  .secaoSobre-plataformas li {
+    display: inline-block;
+    margin-right: 3em;
+    margin: 1em 3em 0 0; /* CORRIGIDO: Adicionado ponto e vírgula que faltava[span_1](start_span)[span_1](end_span) */
+  }
+}
+
+.secaoPlanos {
+  text-align: center;
+  background-color: #F7F4F4;
+  padding: 4em 2%; /* ADICIONADO: Espaçamento para respiro da seção */
+}
+
+/* ADICIONADO: Container flex para alinhar os quadrados lado a lado com espaçamento igual */
+.secaoPlanos-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 2em;
+}
+
+.secaoPlanos-plano {
+  border-radius: 5px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 300px;
+  min-width: 260px; /* ADICIONADO: Garante que todos mantenham uma largura mínima idêntica */
+  padding: 2em 1.5em; /* ALTERADO: Padronizou o espaçamento interno para alinhar os textos */
+  box-shadow: 0 2px 9px #ddd;
+  
+  /* ALTERADO: Transforma em Flexbox vertical para alinhar o conteúdo interno e forçar o botão para baixo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.secaoPlanos-plano-start {
+  color: #56CCF2;
+}
+
+.secaoPlanos-plano-ultra {
+  color: #B04CD9;
+}
+
+.secaoPlanos-plano-mega {
+  color: #E33B3B;
+}
+
+.secaoBlog {
+  text-align: center;
+}
+
+.listaDeartigos-artigos {
+  text-align: left;
+  padding-bottom: 2em;
+  max-width: 815px;
+  display: inline-block;
+  white-space: normal;
+}
+
+.listaDeartigod {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.listaDeartigos-item {
+  display: inline-block;
+  text-align: center;
+  margin: 100%;
+  display: none;
+}
