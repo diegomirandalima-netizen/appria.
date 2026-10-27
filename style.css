@@ -116,7 +116,7 @@ main {
   text-align: center;
 }
 
-.diferenciais-diferencial div{
+.diferenciais-diferencial div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,9 +161,7 @@ main {
   display: none;
 }
 
-
 @media (min-width: 830px) {
-
   .secaoSobre {
     text-align: left;
   }
@@ -196,23 +194,34 @@ main {
 
   .secaoSobre-plataformas li {
     display: inline-block;
-    margin-right: 3em;
-    margin: 1em 3em 0 0
+    /* CORRIGIDO: Adicionado ponto e vírgula que faltava */
+    margin: 1em 3em 0 0; 
   }
 }
 
 .secaoPlanos {
   text-align: center;
   background-color: #F7F4F4;
+  padding: 4em 0; /* Adicionado espaçamento interno para melhorar o visual */
 }
+
+/* ADICIONADO: Flexbox para organizar os cards de planos lado a lado */
+.secaoPlanos-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 2em;
+}
+
 .secaoPlanos-plano {
   border-radius: 5px;
   background-color: #fff;
-  width: 80%;
-  margin: 0 .5em 2em .5em;
+  width: 100%;
+  max-width: 300px;
+  margin: 0; /* Ajustado para usar o gap do container */
   padding-bottom: 2em;
   box-shadow: 0 2px 9px #ddd;
-  max-width: 300px;
   display: inline-block;
 }
 
@@ -227,3 +236,4 @@ main {
 .secaoPlanos-plano-mega {
   color: #E33B3B;
 }
+
