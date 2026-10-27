@@ -116,7 +116,7 @@ main {
   text-align: center;
 }
 
-.diferenciais-diferencial div {
+.diferenciais-diferencial div{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,7 +161,9 @@ main {
   display: none;
 }
 
+
 @media (min-width: 830px) {
+
   .secaoSobre {
     text-align: left;
   }
@@ -194,18 +196,18 @@ main {
 
   .secaoSobre-plataformas li {
     display: inline-block;
-    /* CORRIGIDO: Adicionado ponto e vírgula que faltava */
-    margin: 1em 3em 0 0; 
+    margin-right: 3em;
+    margin: 1em 3em 0 0; /* CORRIGIDO: Adicionado ponto e vírgula que faltava[span_1](start_span)[span_1](end_span) */
   }
 }
 
 .secaoPlanos {
   text-align: center;
   background-color: #F7F4F4;
-  padding: 4em 0; /* Adicionado espaçamento interno para melhorar o visual */
+  padding: 4em 2%; /* ADICIONADO: Espaçamento para respiro da seção */
 }
 
-/* ADICIONADO: Flexbox para organizar os cards de planos lado a lado */
+/* ADICIONADO: Container flex para alinhar os quadrados lado a lado com espaçamento igual */
 .secaoPlanos-container {
   display: flex;
   justify-content: center;
@@ -219,10 +221,14 @@ main {
   background-color: #fff;
   width: 100%;
   max-width: 300px;
-  margin: 0; /* Ajustado para usar o gap do container */
-  padding-bottom: 2em;
+  min-width: 260px; /* ADICIONADO: Garante que todos mantenham uma largura mínima idêntica */
+  padding: 2em 1.5em; /* ALTERADO: Padronizou o espaçamento interno para alinhar os textos */
   box-shadow: 0 2px 9px #ddd;
-  display: inline-block;
+  
+  /* ALTERADO: Transforma em Flexbox vertical para alinhar o conteúdo interno e forçar o botão para baixo */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
 }
 
 .secaoPlanos-plano-start {
@@ -236,4 +242,5 @@ main {
 .secaoPlanos-plano-mega {
   color: #E33B3B;
 }
+
 
