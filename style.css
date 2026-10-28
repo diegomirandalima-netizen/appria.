@@ -206,15 +206,26 @@ main {
   background-color: #F7F4F4;
 }
 
+/* 1. ADICIONADO: Regra específica para o container interno da seção de planos */
+.secaoPlanos .container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* Estica todos os blocos filhos para terem a mesma altura */
+  flex-wrap: wrap;      /* Garante a quebra de linha em telas mobile */
+  gap: 25px;            /* Espaçamento uniforme entre os blocos */
+  padding-top: 2em;
+}
+
 .secaoPlanos-plano {
   border-radius: 5px;
   background-color: #fff;
-  width: 80%;
-  margin: 0 .5em 2em .5em;
-  padding-bottom: 2em;
+  width: 100%;                  /* ALTERADO: largura controlada de forma flexível */
+  padding: 0 1.5em 2em 1.5em;   /* ALTERADO: ajuste de preenchimento das bordas internas */
   box-shadow: 0 2px 9px #ddd;
   max-width: 300px;
-  display: inline-block;
+  display: flex;                /* ALTERADO: vira um container flex vertical */
+  flex-direction: column;       /* ADICIONADO: organiza o título, preço, lista e botão empilhados */
+  align-items: center;          /* ADICIONADO: centraliza o conteúdo de cada card */
 }
 
 .secaoPlanos-plano-start {
@@ -256,6 +267,8 @@ main {
   list-style: disc;
   color: #666;
   display: block;
+  flex-grow: 1;                 /* ADICIONADO: cresce para ocupar toda a área central restante do card */
+  margin: 1.5em 0 1.5em 1.2em;  /* ADICIONADO: espaçamentos internos para a lista e recuo da bolinha */
 }
 
 .secaoPlanos-plano-btn {
@@ -268,6 +281,8 @@ main {
   border-color: inherit;
   padding: .4em 1.5em;
   transition: .1s ease-in;
+  margin-top: auto;             /* ADICIONADO: empurra o botão de forma dinâmica para a base do card */
+  width: 100%;                  /* ADICIONADO: padroniza a largura dos botões em todos os planos */
 }
 
 .secaoPlanos-plano-btn:hover,
@@ -361,4 +376,3 @@ main {
 .listaDeArtigos-slider-item-ativo {
   background: hsla(200, 70%, 0%, .6);
 }
-
