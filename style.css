@@ -358,7 +358,7 @@ main {
   outline: 0;
 }
 
-.listaDeArtigos-slider-item--ativo {
+.listaDeArtigos-slider-item-ativo {
   background: hsla(200, 70%, 0%, .6);
 }
 
