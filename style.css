@@ -206,34 +206,16 @@ main {
   background-color: #F7F4F4;
 }
 
-/* ==========================================================================
-   TRECHO ALTERADO: Alinhamento horizontal dos planos
-   ========================================================================== */
-
-/* 1. ADICIONADO: Regra específica para o container interno da seção de planos */
-.secaoPlanos .container {
-  display: flex;            /* Ativa o Flexbox para alinhar os filhos lado a lado */
-  justify-content: center;  /* Centraliza os cartões horizontalmente */
-  align-items: stretch;     /* Faz todos os cartões terem exatamente a mesma altura */
-  flex-wrap: wrap;          /* Permite que os cartões quebrem de linha em telas pequenas */
-  gap: 30px;                /* Cria um espaçamento consistente entre os blocos de planos */
-}
-
 .secaoPlanos-plano {
   border-radius: 5px;
   background-color: #fff;
-  width: 100%;                  /* ALTERADO: De 260px fixos para 100% para obedecer ao max-width */
-  max-width: 320px;             /* ADICIONADO: Define uma largura máxima elegante para cada plano */
-  padding: 2em 1.5em;           /* ALTERADO: Ajuste no preenchimento interno */
+  width: 80%;
+  margin: 0 .5em 2em .5em;
+  padding-bottom: 2em;
   box-shadow: 0 2px 9px #ddd;
-  
-  /* Melhores práticas para alinhar o conteúdo interno dos planos: */
-  display: flex;                /* ADICIONADO: Flexbox interno para organizar os itens de cima a baixo */
-  flex-direction: column;       /* ADICIONADO: Alinha os elementos internos verticalmente */
-  justify-content: space-between; /* ADICIONADO: Força o botão a ficar fixo no rodapé do card */
+  max-width: 300px;
+  display: inline-block;
 }
-
-/* ========================================================================== */
 
 .secaoPlanos-plano-start {
   color: #56CCF2;
@@ -274,8 +256,6 @@ main {
   list-style: disc;
   color: #666;
   display: block;
-  margin: 1.5em 0 1.5em 1.2em;  /* ADICIONADO: Ajuste fino de margem para espaçar a lista */
-  flex-grow: 1;                 /* ADICIONADO: Faz a lista ocupar o espaço restante, empurrando o botão para baixo */
 }
 
 .secaoPlanos-plano-btn {
@@ -288,7 +268,6 @@ main {
   border-color: inherit;
   padding: .4em 1.5em;
   transition: .1s ease-in;
-  width: 100%;                  /* ADICIONADO: Garante que os botões ocupem toda a largura interna disponível */
 }
 
 .secaoPlanos-plano-btn:hover,
@@ -297,7 +276,11 @@ main {
 }
 
 @media (min-width: 830px) {
-  /* Removido o max-width: 260px antigo daqui para manter a consistência do flexbox */
+
+  .secaoPlanos-plano {
+    max-width: 260px;
+  }
+
 }
 
 .secaoBlog {
@@ -375,6 +358,7 @@ main {
   outline: 0;
 }
 
-.listaDeArtigos-slider-item-ativo {
+.listaDeArtigos-slider-item--ativo {
   background: hsla(200, 70%, 0%, .6);
 }
+
