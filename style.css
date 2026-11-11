@@ -308,6 +308,7 @@ main {
   display: none;
 }
 
+
 .listaDeArtigos-item:not(:target):first-child{
   display: inline-block;
 }
