@@ -1,19 +1,15 @@
-// Variáveis
-var btnAbreDialog = document.querySelector('#abreDialog');
-var dialog = document.querySelector('.dialogNewsletter');
-var dialogBody = document.querySelector('.dialogNewsletter-body');
-var dialogOverlay = document.querySelector('.dialogNewsletter-overlay');
+var btns = document.querySelectorAll('.listaDeArtigos-slider-item');
 
+// Percorre todos os botoes controladores
+btns.forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    
 
-// Quando abrir a dialog...
-btnAbreDialog.addEventListener('click', function() {
-  dialog.classList.add('dialogNewsletter--aberto');
-});
+    // Remove classe 'ativo' dos outros botoes
+    btns.forEach(function(btnRemoveClass) {
+      btnRemoveClass.classList.remove('listaDeArtigos-slider-item--ativo')
+    })
 
-function fechandoDialog() {
-  document.activeElement.blur();
-  dialog.classList.remove('dialogNewsletter--aberto');     
-}
-
-// Listeners
-document.querySelector('.dialogNewsletter-fechar').addEventListener('click', fechandoDialog);
+    this.classList.add('listaDeArtigos-slider-item--ativo')
+  })
+})
