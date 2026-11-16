@@ -618,6 +618,11 @@ main {
   background-image: url(validacao-erro.png);
 }
 
+.secaoInstitucional {
+  color: #666;
+  text-align: center;
+}
+
 .secaoInstitucional-endereco {
   font-size: 1.5em;
   font-style: italic;
@@ -645,8 +650,45 @@ main {
   }
 
   .secaoInstitucional-video {
-    width: 40%;
-    margin-top: 0;
+    width: 100%;max-width: 550px;
+    display: inline-block;
+    margin-top: 30%;
   }
   
+}
+.rodape {
+  background-color: #333;
+  text-align: center;
+}
+
+.rodape-social {
+  margin: 20px 0 10px 0;
+}
+
+.rodape-social li {
+  display: inline-block;
+}
+
+.rodape-social-link {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #fff;
+  margin: 0 10px;
+  text-indent: -999px;
+  overflow: hidden;
+  border: 0;
+  display: block;
+}
+
+.rodape-social-link--facebook {
+  background-image: url(facebook.png);
+
+}
+
+.rodape-social-link--twitter {
+  background-image: url(twitter.png);
+}
+
+.rodape-social-link--intagram {
+  background-image: url(instagram.png);
 }
